@@ -109,6 +109,7 @@ body {
   max-width: 1080px;
   padding: 10px;
   margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1;
 }
 ol,
@@ -148,29 +149,40 @@ body {
 }
 header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-end;
   padding: 20px 0;
-}
-header h1 {
-  font-size: 1.7em;
 }
 header nav {
   display: flex;
   width: 50%;
-  justify-content: space-evenly;
+  justify-content: space-between;
   font-size: 1.2em;
 }
 header nav a {
+  margin-left: 8%;
   color: #000;
+}
+header nav a:hover {
+  text-decoration: underline;
+  color: grey;
+  transition: 1s;
 }
 .summary {
   display: flex;
   padding: 20px 0;
   justify-content: space-between;
+  align-items: center;
 }
-.summary .thumbnail {
-  max-width: 400px;
+.summary .profile-col {
+  max-width: 45%;
+  text-align: center;
+}
+.summary .profile-col h1 {
+  margin-bottom: 20px;
+  font-size: 1.7em;
+}
+.summary .profile-col .thumbnail {
+  width: 90%;
   border-radius: 12px;
 }
 .summary .skills {
@@ -185,7 +197,37 @@ header nav a {
   display: flex;
   flex-direction: column;
 }
-.summary .skills .skills-list span {
+.summary .skills .skills-list .skills-list-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px 0;
   font-size: 1.5em;
+}
+.summary .skills .skills-list .skills-list-row .icon {
+  width: 40px;
+  margin-left: 20px;
+}
+.summary .skills .skills-list .skills-list-row:hover {
+  transition: 1s;
+}
+.summary .skills .skills-list .skill-html:hover {
+  background-color: orangered;
+  color: #fff;
+}
+.summary .skills .skills-list .skill-css:hover {
+  background-color: blue;
+  color: #fff;
+}
+.summary .skills .skills-list .skill-js:hover {
+  background-color: gold;
+  color: #fff;
+}
+.summary .skills .skills-list .skill-react:hover {
+  background-color: lightblue;
+  color: #fff;
+}
+.summary .skills .skills-list .skill-git:hover {
+  background-color: purple;
+  color: #fff;
 }
