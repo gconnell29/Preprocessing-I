@@ -22,6 +22,7 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
+	text-decoration: none;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -30,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+	.desktop-setup;
 	line-height: 1;
 }
 ol, ul {
@@ -50,10 +52,66 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
+// Variables/Mixins ------------------------------------------------------ 
+.desktop-setup {
+	max-width: 1080px;
+	padding: 10px;
+	margin: 0 auto;
+}
+.round-edge {
+	border-radius: 12px;
+}
+
+// button color
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+	h1 {
+		font-size: 1.7em;
+	}
+	nav {
+		display: flex;
+		width: 50%;
+		justify-content: space-evenly;
+		font-size: 1.2em;
+		a {
+			color: #000;
+		}
+	}
+} // close header
+
+.summary {
+	display: flex;
+	padding: 20px 0;
+	justify-content: space-between;
+	.thumbnail {
+		max-width: 400px;
+		.round-edge;
+	}
+	.skills {
+		width: 50%;
+		text-align: center;
+		h2 {
+			margin-bottom: 20px;
+			font-size: 2em;
+		}
+		.skills-list {
+			display: flex;
+			flex-direction: column;
+			span {
+				padding: 10px 0;
+				font-size: 1.5em;
+			}
+		}
+	}
+} // close summary
